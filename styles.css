@@ -1,1 +1,10 @@
-
+.navigation{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: center;
+}
+h3{
+    text-align: center;
+    justify-content: center;
+}
