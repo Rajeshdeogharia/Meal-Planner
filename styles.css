@@ -12,12 +12,16 @@
     
 }
 h3{
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     margin-top: 30px;
     margin-left: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Satisfy', cursive;
     color: white;
+    font-style: italic;
+    font-size: 40px;
+    padding: 2px 20px;
+    text-decoration: underline;
 
 }
 .image{
@@ -28,33 +32,31 @@ h3{
 }
 #container1{
     background-color: white;
-    padding-top: 30px;
-    padding-left: 320px;
+    justify-content:space-around;
     display: flex;
-    padding-bottom: 10px;
+    margin: auto;
+    padding: 40px 140px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #container1 input{
-    display: flex;
     border-radius: 30px;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
-    margin-left: 20px;
     text-align: center;
     background-color: darkgray;
 }
 #container2{
     background-color: white;
-    padding-top: 10px;
-    padding-left: 360px;
     display: flex;
-    padding-bottom: 10px;
+    justify-content: space-around;
+    padding: 10px 280px;
+    margin: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #container2 input{
     display: flex;
     border-radius: 30px;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
     margin-left: 70px;
     text-align: center;
@@ -62,18 +64,18 @@ h3{
 }
 #container3{
     background-color: white;
-    padding-top: 10px;
-    padding-left: 600px;
+    margin: auto;
+    padding: 10px;
+    margin-left: 80px;
     display: flex;
-    padding-bottom: 10px;
+    justify-content: space-around;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #container3 button{
-    display: flex;
     border-radius: 30px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 5px;
+    border: 2px solid black;
+    padding: 15px;
+    width: 160px;
     text-align: center;
     color: white;
     background-color: red;
@@ -111,4 +113,93 @@ h3{
     background-color:coral;
     margin: 20px;
 
+}
+.middle2{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+.middle2 img{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    height: 200px;
+    width: 300px;
+    box-shadow: 0px 0px 10px 1px orange;
+}
+.middle{
+    display: flex;
+    margin: auto;
+    font-family: sans-serif;
+    color: red;
+    font-size: 20px;
+    padding: 10px 15px;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.middle3{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+
+}
+.middle3-1{
+    font-size: 20px;
+    color: white;
+    padding: 20px 90px;
+    margin-left: 76px;
+    background-color: red;
+    box-shadow: 0px 0px 10px 1px orange;
+}
+.middle3-2{
+    font-size: 20px;
+    color: white;
+    padding: 20px 90px;
+    background-color: red;
+    box-shadow: 0px 0px 10px 1px orange;
+}
+.middle3-3{
+    font-size: 20px;
+    color: white;
+    padding: 20px 90px;
+    margin-right: 76px;
+    background-color: red;
+    box-shadow: 0px 0px 10px 1px orange;
+}
+.middle3 p{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.middle3 button{
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px 5px;
+    border: 1px solid white;
+}
+.middle4{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    text-align: center;
+    background-color: lightgray;
+    margin: 40px 70px;
+}
+.middle4 h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    padding: 10px 2px;
+    font-family: sans-serif;
+}
+.middle4 h5{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    font-family: sans-serif;
 }
