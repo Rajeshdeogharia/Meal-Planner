@@ -33,18 +33,16 @@ async function showMealPlan(bmr) {
     let result = await Promise.all(todayData.meals.map(async meal => {
       let calories = (await getCalories(meal.id)).calories;
       let imgUrl = (await getImageUrl(meal.id)).image;
-      let recipes = (await getReciepe(meal.id));
-      console.log("Recipes => " + recipes);
-      let mealTitle = truncateText(meal.title, 25) 
+      let mealTitle = truncateText(meal.title, 25);
 
       return `<div class="card">
-        <p class="middle">BREAKFAST</p>
-        <img class="middle2" src="${imgUrl}" width="300px" height="250px">
+        <p class="middle"></p>
+        <img class="middle2" src="${imgUrl}" width="400px" height="300px">
         <div class="middle3">
           <div class="middle3-1 description">
             <p>${mealTitle}</p>
             <h4>Calories - ${calories}</h4>
-            <button class="btn">GET RECIPE</button>
+            <button class="btn" onclick=showRecipe("${meal.id}")>GET RECIPE</button>
           </div>
         </div>
       </div>`;
@@ -85,10 +83,22 @@ function truncateText(text, maxLength) {
   return text;
 }
 
-async function getReciepe(id) {
+async function showRecipe(id) {
   const recipesURL = "https://api.spoonacular.com/recipes/" + id + "/information?apiKey=f320aafbabaa4d08beafba2dac29d887";
-  return await fetch(recipesURL)
-    .then(res => res.json())
-    .catch(err => console.log(err))
+  const recipes = await fetch(recipesURL);
+  const data = await recipes.json();
+  console.log(data);
+  let tableHead = "<table><thead><th>INGREDIENTS</th><th>STEPS</th><th>EQUIPMENT</th></thead><tbody>";
+  let tableFooter = "</tbody></table>"
+  let tableContent =""
+  data.extendedIngredients.map(steps => {
+    tableContent += `<tr> 
+      <td> ${steps.name} </td>
+      <td> </td>
+      <td> ${steps.amount} ${steps.unit} </td>
+      </tr>
+    `;
+  }).join();
+  document.getElementById("receipe").innerHTML = tableHead + tableContent + tableFooter;
 
 }

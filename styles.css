@@ -2,13 +2,39 @@
     margin: 0;
     padding: 0;
 
-}.navigation{
+}
+::placeholder{
+    color: black;
+    font-weight: bold;
+}
+#activity
+{
+    display: flex;
+    border-radius: 30px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 70px;
+    text-align: center;
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+}
+.navigation{
     display: flex;
     padding-left: 20px;
     padding-right: 50px;
     padding-bottom: 30px;
     align-items: center;
-    background-color:red;
+    background-color:rgb(211, 0, 0);
+    
+}
+.navigation:hover{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    align-items: center;
+    background-color:rgb(255, 1, 1);
     
 }
 h3{
@@ -24,6 +50,7 @@ h3{
     text-decoration: underline;
 
 }
+
 .image{
     margin-top: 30px;
     margin-left: 10px;
@@ -209,10 +236,38 @@ h3{
 }
 
 .card {
-    padding: 10px 20px;
+    padding: 5px 2px;
     border: 1px solid black;
+    border-radius: 5px;
+    background-color:rgb(202, 202, 202);
 }
 
 .description {
     padding: 10px;
+}
+table{
+    width: 97%;
+    margin: 50px 20px;
+    background-color: rgb(202, 202, 202);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    border: 1px solid red; 
+}
+table:hover{
+    background-color:beige;
+}
+table thead{
+    color: red;
+    font-size: 20px;
+}
+table thead th{
+    padding: 30px;
+}
+table tr td{
+    color:black;
+    font-size: 17px;
+    padding-left: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
 }
