@@ -22,6 +22,7 @@ function calculateBMR() {
 }
 
 async function showMealPlan(bmr) {
+  let i=0
   try {
     let url = "https://api.spoonacular.com/mealplanner/generate?targetCalories=" + bmr + "&apiKey=f320aafbabaa4d08beafba2dac29d887";
     let response = await fetch(url);
@@ -34,9 +35,9 @@ async function showMealPlan(bmr) {
       let calories = (await getCalories(meal.id)).calories;
       let imgUrl = (await getImageUrl(meal.id)).image;
       let mealTitle = truncateText(meal.title, 25);
-
+      let title = showTitle(i++)
       return `<div class="card">
-        <p class="middle"></p>
+        <p class="middle">${title}</p>
         <img class="middle2" src="${imgUrl}" width="400px" height="300px">
         <div class="middle3">
           <div class="middle3-1 description">
@@ -54,6 +55,19 @@ async function showMealPlan(bmr) {
   }
 }
 
+function showTitle(i)
+{
+  if(i==0)
+  {
+    return 'BREAKFAST';
+  }
+  else if(i==1){
+    return 'LUNCH';
+  }
+  else {
+    return 'DINNER';
+  }
+}
 function getDayOfWeek() {
   const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
   return days[new Date().getDay()]
